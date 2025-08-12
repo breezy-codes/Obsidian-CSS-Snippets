@@ -1,0 +1,40 @@
+/* === Footnotes Styling for Obsidian === */
+/* This CSS snippet styles footnotes in Obsidian, enhancing their visibility and aesthetics. It applies specific styles to footnote references and the footnote text itself, ensuring they are visually distinct and easy to read. */
+
+/* Style footnotes */
+.cm-s-obsidian span.cm-footref.cm-hmd-barelink {
+    vertical-align: super;
+    font-size: 0.7em;
+    color: rgb(var(--drac-purple-rgb));
+    text-decoration: none;
+    position: relative;
+}
+
+.cm-s-obsidian .cm-line.HyperMD-footnote span.cm-footref {
+    color: rgb(var(--drac-purple-rgb));
+}
+
+.cm-s-obsidian span.cm-footref.cm-formatting-link.cm-formatting-link-start,
+.cm-s-obsidian span.cm-footref.cm-formatting-link.cm-formatting-link-end {
+    color: rgb(var(--drac-purple-rgb)) !important;
+}
+
+/* Override link color and remove underline for footnote number */
+.cm-s-obsidian .cm-line.HyperMD-footnote a.cm-underline {
+    color: rgb(var(--drac-purple-rgb)) !important;
+    background: none !important;
+    font-size: 1.1em;
+    background-clip: unset !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+    text-decoration: none !important;
+}
+
+
+.cm-footref span,
+.HyperMD-footnote span {
+    font-size: var(--font-text-size);
+    font-family: var(--font-text);
+    color: var(--text-normal);
+    line-height: var(--line-height);
+}

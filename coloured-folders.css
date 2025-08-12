@@ -1,0 +1,210 @@
+/* === Folder Coloring for Navigation === */
+/* This CSS snippet styles folders in the Obsidian navigation pane with a rainbow color palette based on folder prefixes. It applies a unique colour to each folder based on its prefix, enhancing visual organisation. */
+/* It applies to both the default folder view and also the navigation view within makemd. */
+/* You can customise to suit your folder structure by changing the prefixes and colours. */
+
+:root {
+    --folder-font-weight: bold;
+    --folder-margin: 0px;
+    --folder-border-radius: 4px;
+    --folder-opacity: 0.9;
+    --folder-selected-opacity: 0.6;
+
+    --rainbow-0-rgb: 122, 91, 185;  /* #7A5BB9 */
+    --rainbow-1-rgb: 168, 117, 216; /* #A875D8 */
+    --rainbow-2-rgb: 188, 110, 207; /* #BC6ECF */
+    --rainbow-3-rgb: 212, 109, 194; /* #D46DC2 */
+    --rainbow-4-rgb: 239, 124, 184; /* #EF7CB8 */
+    --rainbow-5-rgb: 245, 141, 165; /* #F58DA5 */
+    --rainbow-6-rgb: 250, 180, 140; /* #FAB48C */
+    --rainbow-7-rgb: 255, 199, 119; /* #FFC777 */
+    --rainbow-8-rgb: 255, 242, 106; /* #FFF26A */
+    --rainbow-9-rgb: 232, 242, 102; /* #E8F266 */
+    --rainbow-10-rgb: 197, 238, 115; /* #C5EE73 */
+    --rainbow-11-rgb: 137, 227, 136; /* #89E388 */
+    --rainbow-12-rgb: 94, 212, 166;  /* #5ED4A6 */
+    --rainbow-13-rgb: 79, 202, 221;  /* #4FCADD */
+    --rainbow-14-rgb: 72, 184, 240;  /* #48B8F0 */
+    --rainbow-15-rgb: 104, 158, 244; /* #689EF4 */
+    --rainbow-16-rgb: 139, 143, 244; /* #8B8FF4 */
+
+}
+
+
+.mk-tree-item[data-path^="00"], .nav-folder-title[data-path^="00"],
+.mk-tree-item[data-path^="16"], .nav-folder-title[data-path^="16"] {
+    background-color: rgba(var(--rainbow-0-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="01"], .nav-folder-title[data-path^="01"],
+.mk-tree-item[data-path^="17"], .nav-folder-title[data-path^="17"] {
+    background-color: rgba(var(--rainbow-1-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="02"], .nav-folder-title[data-path^="02"],
+.mk-tree-item[data-path^="18"], .nav-folder-title[data-path^="18"] {
+    background-color: rgba(var(--rainbow-2-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="03"], .nav-folder-title[data-path^="03"],
+.mk-tree-item[data-path^="19"], .nav-folder-title[data-path^="19"] {
+    background-color: rgba(var(--rainbow-3-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="04"], .nav-folder-title[data-path^="04"],
+.mk-tree-item[data-path^="20"], .nav-folder-title[data-path^="20"] {
+    background-color: rgba(var(--rainbow-4-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="05"], .nav-folder-title[data-path^="05"],
+.mk-tree-item[data-path^="21"], .nav-folder-title[data-path^="21"] {
+    background-color: rgba(var(--rainbow-5-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="06"], .nav-folder-title[data-path^="06"],
+.mk-tree-item[data-path^="22"], .nav-folder-title[data-path^="22"] {
+    background-color: rgba(var(--rainbow-6-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="07"], .nav-folder-title[data-path^="07"],
+.mk-tree-item[data-path^="23"], .nav-folder-title[data-path^="23"] {
+    background-color: rgba(var(--rainbow-7-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="08"], .nav-folder-title[data-path^="08"],
+.mk-tree-item[data-path^="24"], .nav-folder-title[data-path^="24"] {
+    background-color: rgba(var(--rainbow-8-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="09"], .nav-folder-title[data-path^="09"],
+.mk-tree-item[data-path^="25"], .nav-folder-title[data-path^="25"] {
+    background-color: rgba(var(--rainbow-9-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="10"], .nav-folder-title[data-path^="10"],
+.mk-tree-item[data-path^="26"], .nav-folder-title[data-path^="26"] {
+    background-color: rgba(var(--rainbow-10-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="11"], .nav-folder-title[data-path^="11"],
+.mk-tree-item[data-path^="27"], .nav-folder-title[data-path^="27"] {
+    background-color: rgba(var(--rainbow-11-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="12"], .nav-folder-title[data-path^="12"],
+.mk-tree-item[data-path^="28"], .nav-folder-title[data-path^="28"] {
+    background-color: rgba(var(--rainbow-12-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="13"], .nav-folder-title[data-path^="13"],
+.mk-tree-item[data-path^="29"], .nav-folder-title[data-path^="29"] {
+    background-color: rgba(var(--rainbow-13-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="14"], .nav-folder-title[data-path^="14"],
+.mk-tree-item[data-path^="30"], .nav-folder-title[data-path^="30"] {
+    background-color: rgba(var(--rainbow-14-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="15"], .nav-folder-title[data-path^="15"],
+.mk-tree-item[data-path^="31"], .nav-folder-title[data-path^="31"] {
+    background-color: rgba(var(--rainbow-15-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="16"], .nav-folder-title[data-path^="16"],
+.mk-tree-item[data-path^="32"], .nav-folder-title[data-path^="32"] {
+    background-color: rgba(var(--rainbow-0-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="17"], .nav-folder-title[data-path^="17"],
+.mk-tree-item[data-path^="33"], .nav-folder-title[data-path^="33"] {
+    background-color: rgba(var(--rainbow-1-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="18"], .nav-folder-title[data-path^="18"],
+.mk-tree-item[data-path^="34"], .nav-folder-title[data-path^="34"] {
+    background-color: rgba(var(--rainbow-2-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="19"], .nav-folder-title[data-path^="19"],
+.mk-tree-item[data-path^="35"], .nav-folder-title[data-path^="35"] {
+    background-color: rgba(var(--rainbow-3-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="20"], .nav-folder-title[data-path^="20"],
+.mk-tree-item[data-path^="36"], .nav-folder-title[data-path^="36"] {
+    background-color: rgba(var(--rainbow-4-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="21"], .nav-folder-title[data-path^="21"],
+.mk-tree-item[data-path^="37"], .nav-folder-title[data-path^="37"] {
+    background-color: rgba(var(--rainbow-5-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="22"], .nav-folder-title[data-path^="22"],
+.mk-tree-item[data-path^="38"], .nav-folder-title[data-path^="38"] {
+    background-color: rgba(var(--rainbow-6-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="23"], .nav-folder-title[data-path^="23"],
+.mk-tree-item[data-path^="39"], .nav-folder-title[data-path^="39"] {
+    background-color: rgba(var(--rainbow-7-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="24"], .nav-folder-title[data-path^="24"],
+.mk-tree-item[data-path^="40"], .nav-folder-title[data-path^="40"] {
+    background-color: rgba(var(--rainbow-8-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="25"], .nav-folder-title[data-path^="25"],
+.mk-tree-item[data-path^="41"], .nav-folder-title[data-path^="41"] {
+    background-color: rgba(var(--rainbow-9-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="26"], .nav-folder-title[data-path^="26"],
+.mk-tree-item[data-path^="42"], .nav-folder-title[data-path^="42"] {
+    background-color: rgba(var(--rainbow-10-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="27"], .nav-folder-title[data-path^="27"],
+.mk-tree-item[data-path^="43"], .nav-folder-title[data-path^="43"] {
+    background-color: rgba(var(--rainbow-11-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="28"], .nav-folder-title[data-path^="28"],
+.mk-tree-item[data-path^="44"], .nav-folder-title[data-path^="44"] {
+    background-color: rgba(var(--rainbow-12-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="29"], .nav-folder-title[data-path^="29"],
+.mk-tree-item[data-path^="45"], .nav-folder-title[data-path^="45"] {
+    background-color: rgba(var(--rainbow-13-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="30"], .nav-folder-title[data-path^="30"],
+.mk-tree-item[data-path^="46"], .nav-folder-title[data-path^="46"] {
+    background-color: rgba(var(--rainbow-14-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item[data-path^="31"], .nav-folder-title[data-path^="31"],
+.mk-tree-item[data-path^="47"], .nav-folder-title[data-path^="47"] {
+    background-color: rgba(var(--rainbow-15-rgb), var(--folder-opacity));
+}
+
+.mk-tree-item,
+.nav-folder-title {
+    font-weight: var(--folder-font-weight);
+    border-radius: var(--folder-border-radius);
+    margin-bottom: var(--folder-margin);
+}
+
+.nav-folder-title.is-selected,
+.nav-folder-title.is-active,
+.nav-folder-title:hover {
+    background-color: inherit !important;
+    opacity: calc(var(--folder-opacity) + 0.6);
+}
+
+.mk-tree-text.nav-folder-title-content {
+    font-size: 13px;
+}

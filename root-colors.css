@@ -1,0 +1,13 @@
+/* === Dracula Theme Colors === */
+/* This CSS snippet defines the base colors for the Dracula theme, which are used in all other snippets. */
+
+:root {
+    /* Dracula base palette*/
+    --drac-bg: #282A37;
+    --drac-pink-rgb: 255, 121, 198;
+    --drac-cyan-rgb: 132, 222, 240;
+    --drac-purple-rgb: 189, 147, 249;
+    --drac-green-rgb: 80, 250, 123;
+    --drac-yellow-rgb: 241, 250, 140;
+    --drac-red-rgb: 255, 85, 85;
+}

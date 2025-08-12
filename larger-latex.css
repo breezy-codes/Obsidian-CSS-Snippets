@@ -1,0 +1,4 @@
+/* === Larger LaTeX Snippet === */
+/* This CSS snippet increases the font size of LaTeX elements in Obsidian. It is useful for making mathematical expressions more readable. */
+
+.MJX-TEX { font-size:140%; }

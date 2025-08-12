@@ -1,0 +1,12 @@
+/* === Code Block Styles === */
+/* This CSS snippet styles code blocks in Obsidian, applying a solid left border to distinguish them visually. */
+
+/* === Code Block Styles === */
+.markdown-rendered pre {
+  border-left: solid;
+}
+
+/* === Code Block Styles for HyperMD === */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  border-left: solid;
+}

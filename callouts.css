@@ -1,0 +1,248 @@
+/* === Callout Styles === */
+/* This CSS snippet styles callouts in Obsidian, applying a gradient border and a semi-transparent background. */
+
+/* Base background for all callouts */
+.callout {
+    background-color: var(--drac-bg) !important;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-s);
+    z-index: 0;
+}
+
+/* Tint overlay using callout color */
+.callout::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgb(var(--callout-color), 0.5);
+    border-radius: var(--radius-s);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Dracula gradient border */
+.callout::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px; /* Border thickness */
+    border-radius: inherit;
+    background: linear-gradient(
+        90deg,
+        rgba(var(--drac-pink-rgb), 0.8) 0%,
+                                rgba(var(--drac-purple-rgb), 0.8) 15%,
+                                rgba(var(--drac-cyan-rgb), 0.8) 30%,
+                                rgba(var(--drac-green-rgb), 0.8) 45%,
+                                rgba(var(--drac-yellow-rgb), 0.8) 60%,
+                                rgba(var(--drac-pink-rgb), 0.8) 75%,
+                                rgba(var(--drac-purple-rgb), 0.8) 90%,
+                                rgba(var(--drac-cyan-rgb), 0.8) 100%
+    );
+    mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    pointer-events: none;
+    z-index: 1; /* above tint, below content */
+    box-sizing: border-box;
+}
+
+/* Ensure content stays above both overlays */
+.callout > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Default scrollable (8 lines) */
+.callout[data-callout$="-scrollable"] .callout-content {
+    --shown-line-count: 8;
+}
+
+/* Custom scrollable variants */
+.callout[data-callout$="-scrollable10"] .callout-content {
+    --shown-line-count: 10;
+}
+
+.callout[data-callout$="-scrollable16"] .callout-content {
+    --shown-line-count: 16;
+}
+
+/* Shared scroll behaviour */
+.callout[data-callout$="-scrollable"],
+.callout[data-callout$="-scrollable10"],
+.callout[data-callout$="-scrollable16"] {
+    overflow: hidden;
+}
+
+.callout[data-callout$="-scrollable"] .callout-content,
+.callout[data-callout$="-scrollable10"] .callout-content,
+.callout[data-callout$="-scrollable16"] .callout-content {
+    max-height: calc(var(--line-height-normal) * 1rem * var(--shown-line-count));
+    overflow-y: auto;
+}
+
+/* ================= SHARED STYLING FOR ALL CALLOUTS ================= */
+
+/* === NOTE === */
+.callout[data-callout^="note"] {
+    --callout-color: var(--drac-pink-rgb);
+    --callout-icon: lucide-pencil;
+    background-color: rgba(var(--drac-pink-rgb), 0.2);
+}
+
+/* === FIGURE === */
+.callout[data-callout^="figure"] {
+    --callout-color: var(--drac-pink-rgb);
+    --callout-icon: lucide-pencil;
+    background-color: rgba(var(--drac-pink-rgb), 0.2);
+}
+
+/* === QUESTION === */
+.callout[data-callout^="question"] {
+    --callout-color: var(--drac-pink-rgb);
+    --callout-icon: lucide-help-circle;
+    background-color: rgba(var(--drac-pink-rgb), 0.2);
+}
+
+/* === TODO === */
+.callout[data-callout^="todo"] {
+    --callout-color: var(--drac-cyan-rgb);
+    --callout-icon: lucide-list-check;
+    background-color: rgba(var(--drac-cyan-rgb), 0.2);
+}
+
+/* === THEOREM === */
+.callout[data-callout^="theorem"] {
+    --callout-color: var(--drac-purple-rgb);
+    --callout-icon: lucide-square-sigma;
+    background-color: rgba(var(--drac-purple-rgb), 0.2);
+}
+
+/* === DEFINITION === */
+.callout[data-callout^="definition"] {
+    --callout-color: var(--drac-purple-rgb);
+    --callout-icon: lucide-pencil;
+    background-color: rgba(var(--drac-purple-rgb), 0.2);
+}
+
+/* === EQUATION === */
+.callout[data-callout^="equation"] {
+    --callout-color: var(--drac-purple-rgb);
+    --callout-icon: lucide-calculator;
+    background-color: rgba(var(--drac-purple-rgb), 0.2);
+}
+
+/* === EXAMPLE === */
+.callout[data-callout^="example"] {
+    --callout-color: var(--drac-cyan-rgb);
+    --callout-icon: lucide-book-open;
+    background-color: rgba(var(--drac-cyan-rgb), 0.2);
+}
+
+/* === CITE & QUOTE === */
+.callout[data-callout^="cite"],
+.callout[data-callout^="quote"] {
+    --callout-color: var(--drac-yellow-rgb);
+    --callout-icon: lucide-quote;
+    background-color: rgba(var(--drac-yellow-rgb), 0.2);
+}
+
+/* === BUG === */
+.callout[data-callout^="bug"] {
+    --callout-color: var(--drac-red-rgb);
+    --callout-icon: lucide-bug;
+    background-color: rgba(var(--drac-red-rgb), 0.2);
+}
+
+/* === DANGER & ERROR === */
+.callout[data-callout^="danger"],
+.callout[data-callout^="error"] {
+    --callout-color: var(--drac-red-rgb);
+    --callout-icon: lucide-zap;
+    background-color: rgba(var(--drac-red-rgb), 0.2);
+}
+
+/* === FAIL, FAILURE, MISSING === */
+.callout[data-callout^="fail"],
+.callout[data-callout^="failure"],
+.callout[data-callout^="missing"] {
+    --callout-color: var(--drac-red-rgb);
+    --callout-icon: lucide-x;
+    background-color: rgba(var(--drac-red-rgb), 0.2);
+}
+
+/* === CHECK, DONE, SUCCESS === */
+.callout[data-callout^="check"],
+.callout[data-callout^="done"],
+.callout[data-callout^="success"] {
+    --callout-color: var(--drac-green-rgb);
+    --callout-icon: lucide-check;
+    background-color: rgba(var(--drac-green-rgb), 0.2);
+}
+
+/* === ABSTRACT, SUMMARY, TLDR === */
+.callout[data-callout^="abstract"],
+.callout[data-callout^="summary"],
+.callout[data-callout^="tldr"] {
+    --callout-color: var(--drac-green-rgb);
+    --callout-icon: lucide-file-text;
+    background-color: rgba(var(--drac-green-rgb), 0.2);
+}
+
+/* === HINT, IMPORTANT, TIP === */
+.callout[data-callout^="hint"],
+.callout[data-callout^="important"],
+.callout[data-callout^="tip"] {
+    --callout-color: var(--drac-green-rgb);
+    --callout-icon: lucide-flame;
+    background-color: rgba(var(--drac-green-rgb), 0.2);
+}
+
+/* === ATTENTION, CAUTION, WARNING === */
+.callout[data-callout^="attention"],
+.callout[data-callout^="caution"],
+.callout[data-callout^="warning"] {
+    --callout-color: var(--drac-yellow-rgb);
+    --callout-icon: lucide-alert-triangle;
+    background-color: rgba(var(--drac-yellow-rgb), 0.2);
+}
+
+/* === FAQ, HELP === */
+.callout[data-callout^="faq"],
+.callout[data-callout^="help"] {
+    --callout-color: var(--drac-yellow-rgb);
+    --callout-icon: lucide-help-circle;
+    background-color: rgba(var(--drac-yellow-rgb), 0.2);
+}
+
+/* ================= NEUTRAL CALLOUT SETTINGS ================= */
+
+/* === NEUTRAL (unstyled, no title, no icon, no styling) === */
+.callout[data-callout="neutral"] {
+    --callout-color: 255, 255, 255;
+    --callout-icon: none;
+    background-color: unset !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.callout[data-callout="neutral"]::before {
+    display: none !important;
+}
+
+/* Hide the title bar completely */
+.callout[data-callout="neutral"] .callout-title {
+    display: none !important;
+}
+
+.callout[data-callout="neutral"]::after {
+    content: none !important;
+    display: none !important;
+}

@@ -1,0 +1,136 @@
+/* === Colorful Headings for Obsidian === */
+/* This CSS snippet styles headings in Obsidian with a colorful gradient effect. It applies to both the source view and the preview view, ensuring that all headings are consistently styled. */
+
+h1::after,
+.HyperMD-header-1::after,
+h2::after,
+.HyperMD-header-2::after,
+h3::after,
+.HyperMD-header-3::after,
+h4::after,
+.HyperMD-header-4::after,
+h5::after,
+.HyperMD-header-5::after,
+h6::after,
+.HyperMD-header-6::after,
+.markdown-preview-view hr,
+.hr.cm-line,
+.HyperMD-hr-bg {
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(var(--drac-pink-rgb), 0.8) 0%,
+        rgba(var(--drac-purple-rgb), 0.8) 10%,
+        rgba(var(--drac-cyan-rgb), 0.8) 20%,
+        rgba(var(--drac-green-rgb), 0.8) 30%,
+        rgba(var(--drac-yellow-rgb), 0.8) 40%,
+        rgba(var(--drac-pink-rgb), 0.8) 50%,
+        rgba(var(--drac-purple-rgb), 0.8) 60%,
+        rgba(var(--drac-cyan-rgb), 0.8) 70%,
+        rgba(var(--drac-green-rgb), 0.8) 80%,
+        rgba(var(--drac-yellow-rgb), 0.8) 90%,
+        rgba(var(--drac-pink-rgb), 0.8) 100%
+    );
+}
+
+/* === Centered Headings with Gradient === */
+h1, h2, h3, h4, h5, h6,
+.HyperMD-header-1,
+.HyperMD-header-2,
+.HyperMD-header-3,
+.HyperMD-header-4,
+.HyperMD-header-5,
+.HyperMD-header-6 {
+    text-align: center;
+}
+
+/* === Heading Styles with sizing and colours === */
+h1, .HyperMD-header-1 {
+    font-size: 2.25em;
+    font-weight: 600;
+    color: rgb(var(--drac-pink-rgb));
+}
+
+h2, .HyperMD-header-2 {
+    font-size: 2em;
+    font-weight: 600;
+    color: rgb(var(--drac-purple-rgb));
+}
+
+h3, .HyperMD-header-3 {
+    font-size: 1.75em;
+    font-weight: 600;
+    color: rgb(var(--drac-cyan-rgb));
+}
+
+h4, .HyperMD-header-4 {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: rgb(var(--drac-green-rgb));
+}
+
+h5, .HyperMD-header-5 {
+    font-size: 1.25em;
+    font-weight: 500;
+    color: rgb(var(--drac-yellow-rgb));
+}
+
+h6, .HyperMD-header-6 {
+    font-size: 1em;
+    font-weight: 400;
+    color: rgb(var(--drac-pink-rgb));
+}
+
+/* === Gradient Underline for Headings === */
+h1::after,
+.HyperMD-header-1::after,
+h2::after,
+.HyperMD-header-2::after,
+h3::after,
+.HyperMD-header-3::after,
+h4::after,
+.HyperMD-header-4::after,
+h5::after,
+.HyperMD-header-5::after,
+h6::after,
+.HyperMD-header-6::after {
+    margin-top: 0.2em;
+    content: "";
+    width: auto !important;
+    display: flex !important;
+    height: 0.3em;
+    border-radius: 10px;
+}
+
+/* === Horizontal Lines with Rainbow Symbol === */
+.markdown-source-view.mod-cm6 .cm-content :is(.hr, .HyperMD-hr) {
+    contain: style !important;
+}
+
+.markdown-preview-view hr,
+.hr.cm-line,
+.HyperMD-hr-bg {
+    margin-block-start: 2em;
+    margin-block-end: 2em;
+    border: none;
+    border-radius: 3px;
+    height: 3px;
+}
+
+.hr.cm-line hr {
+    border: 0;
+}
+
+/* === Rainbow Symbol for Horizontal Lines === */
+.hr.cm-line::after,
+.markdown-preview-view hr::after,
+div:not(.CodeMirror-activeline) > .HyperMD-hr-bg::after {
+    content: "🌈";
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    font-size: 13px;
+    color: var(--text-sub-accent);
+    padding: 0 0.5em;
+    margin-top: -0.6em;
+    background-color: var(--background-primary);
+}

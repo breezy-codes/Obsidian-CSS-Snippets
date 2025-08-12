@@ -1,0 +1,18 @@
+/* === Image Settings for Obsidian === */
+/* This CSS snippet provides settings for images in Obsidian, including centering and setting a maximum width. */
+
+/* === Centering images in Obsidian === */
+.markdown-preview-view img,
+.markdown-source-view img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* === If using images inside links, also center === */
+.markdown-preview-view a img,
+.markdown-source-view a img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

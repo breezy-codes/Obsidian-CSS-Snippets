@@ -1,0 +1,25 @@
+/* === Faded Task Emoji === */
+/* This CSS snippet styles task list items in Obsidian to have a faded emoji when the task is checked. */
+
+ul > li.task-list-item p {
+    text-indent: -1.5em;
+}
+ul > li.task-list-item.is-checked {
+    position: relative;
+    filter: url();
+}
+ul > li.task-list-item.is-checked::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    backdrop-filter: grayscale();
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.markdown-source-view.mod-cm6
+.HyperMD-task-line[data-task]:not([data-task=" "])
+span {
+    filter: grayscale();
+}
